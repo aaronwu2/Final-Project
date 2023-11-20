@@ -1,44 +1,238 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+html{
+    font-size: 20px;
+}
 body{
-    background-color:#0B0E14;
+    background-color: black;
     font-family: 'Lato',sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     color: #F8E6DE;
     overflow-x: hidden;
 }
-ol{
+ol {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-left: 35em;
-}
-
-.logo{
-    height: 80px;
-    width: 80px;
-    left: 0px;
     position: relative;
-    top:2em;
-    left: 4em;
+    bottom: 3.5rem;
+    left: 25rem;
 }
 
-.lists{
+.logo {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.lists {
     color: #F8E6DE;
-    font-size: 20px;
-    margin: 1em;
-    position: relative;
-    top: -3em;
-    left: 11em;
+    margin: 25px;
+    transition: color 0.3s ease;
 }
 
+.lists:hover {
+    cursor: pointer;
+    color: #A98F76;
+}
+
+a{
+    text-decoration: none;
+}
 .home-section1{
     position: relative;
-    left: 6em;
+    left: 18rem;
+    bottom: 4rem;
 }
-img.home-section1{
-    width: 100px;
-    height: 100px;
+
+@keyframes glow-in{
+    0%{
+        opacity: 0;
+        transform: scale(0,0) rotate(-270deg);       
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1,1) rotate(-360deg); 
+    }
 }
+.h-pict1{
+    position: relative;
+    bottom: 3rem;
+    left: 10rem;
+    animation: glow-in 2.5s ease-in ;
+}
+@keyframes slide-left{
+    0%{transform: translate(-100%);}
+    100%{transform: translateX(0%);}
+}
+@keyframes slide-right{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(0%);}
+}
+
+.h1-leftside{
+    font-size: 45px;
+    position: relative;
+    top: 11rem;
+    right: 10rem;
+    z-index: 1;
+    animation: slide-left 2.3s forwards;
+}
+
+.h1-rightside{
+    font-size: 45px;
+    position: relative;
+    top: 15rem;
+    left: 36rem;
+    z-index: 1;
+    animation: slide-right 2.3s forwards;
+}
+
+.h-pict2{
+    width: 450px;
+    height:450px;
+    position: relative;
+    top: 5rem;
+    left: 5rem;
+    animation: glow-in 2s ease-in ;
+}
+@keyframes glow-ins{
+    0%{
+        opacity: 0;     
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.h2-leftside{
+    font-size: 35px;
+    position: relative;
+    bottom: 15rem;
+    left: 30rem;
+    z-index: 1;
+    animation: glow-ins 5s forwards;
+}
+.h2-paragraph{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    position: relative;
+    bottom: 15rem;
+    left: 30rem;
+    animation: glow-ins 5s forwards;
+}
+#order{
+    background-color: #121212;
+    border: 1px solid white;
+    color: whitesmoke;
+    font-weight: bold;
+    position: relative;
+    bottom: 15rem;
+    left: 30rem;
+    padding: 18px;
+    animation: glow-ins 5s forwards;
+}
+#order:hover{
+    background-color: #F5D400;
+    color: #121212;
+    cursor: pointer;
+}
+
+.h3-center{
+    text-align: center;
+    font-size: 35px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 19.5rem;
+    animation: glow-ins 3s ease-in;
+}
+.container img{
+    width: 270px;
+    height: 270px;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+
+.home-section4{
+    position: relative;
+    left: 5rem;
+    margin-bottom: 18rem;
+}
+.home-section4 img{
+    width: 400px;
+    height: 400px;
+    border-radius: 15%;
+    position: relative;
+    left: 50rem;
+    top: 16rem;
+}
+.footer{
+    background-color: #100F10;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    margin: 0;
+}
+.side1{
+    position: relative;
+    left: 150px;
+}
+.side2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 250px;
+}
+.socmed{
+    width:35px;
+    height:35px;
+    position: relative;
+    left: 50px;
+}
+.facebook{
+    position: relative;
+    bottom: 30px;
+    left: 90px;
+}
+.instagram{
+    position: relative;
+    bottom: 50px;
+    left: 90px;
+}
+.twitter{
+    position: relative;
+    bottom: 70px;
+    left: 90px;
+}
+.side3{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 500px;
+}
+.contact{
+    width:35px;
+    height:35px;
+    position: relative;
+    left: 0px;
+}
+.location{
+    position: relative;
+    bottom: 30px;
+    left: 45px;
+}
+.email{
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+}
+
