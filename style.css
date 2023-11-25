@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@keyframes glow-in{
+    0%{
+        opacity: 0;
+        transform: scale(0,0) rotate(-270deg);       
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1,1) rotate(-360deg); 
+    }
+}
 
+@keyframes slide-left{
+    0%{transform: translate(-100%);}
+    100%{transform: translateX(0%);}
+}
+@keyframes slide-right{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(0%);}
+}
+
+@keyframes glow-ins{
+    0%{
+        opacity: 0;     
+    }
+    100%{
+        opacity: 1;
+    }
+}
 html{
     font-size: 20px;
 }
@@ -51,29 +78,11 @@ a{
     bottom: 4rem;
 }
 
-@keyframes glow-in{
-    0%{
-        opacity: 0;
-        transform: scale(0,0) rotate(-270deg);       
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1,1) rotate(-360deg); 
-    }
-}
 .h-pict1{
     position: relative;
     bottom: 3rem;
     left: 10rem;
     animation: glow-in 2.5s ease-in ;
-}
-@keyframes slide-left{
-    0%{transform: translate(-100%);}
-    100%{transform: translateX(0%);}
-}
-@keyframes slide-right{
-    0%{transform: translateX(100%);}
-    100%{transform: translateX(0%);}
 }
 
 .h1-leftside{
@@ -93,22 +102,15 @@ a{
     z-index: 1;
     animation: slide-right 2.3s forwards;
 }
-
 .h-pict2{
     width: 450px;
     height:450px;
     position: relative;
     top: 5rem;
-    left: 5rem;
-    animation: glow-in 2s ease-in ;
+    left: 5rem;    
 }
-@keyframes glow-ins{
-    0%{
-        opacity: 0;     
-    }
-    100%{
-        opacity: 1;
-    }
+.active #h-pic2{
+    animation: glow-in 2s ease-in ;
 }
 
 .h2-leftside{
@@ -117,6 +119,8 @@ a{
     bottom: 15rem;
     left: 30rem;
     z-index: 1;
+}
+.active #h-t2{
     animation: glow-ins 5s forwards;
 }
 .h2-paragraph{
@@ -125,6 +129,8 @@ a{
     position: relative;
     bottom: 15rem;
     left: 30rem;
+}
+.active #h-p2{
     animation: glow-ins 5s forwards;
 }
 #order{
@@ -136,6 +142,9 @@ a{
     bottom: 15rem;
     left: 30rem;
     padding: 18px;
+    
+}
+.active #order{
     animation: glow-ins 5s forwards;
 }
 #order:hover{
@@ -152,7 +161,9 @@ a{
     display: flex;
     flex-direction: row;
     position: relative;
-    left: 19.5rem;
+    left: 19.5rem;   
+}
+.active #cont{
     animation: glow-ins 3s ease-in;
 }
 .container img{
@@ -174,6 +185,9 @@ a{
     position: relative;
     left: 50rem;
     top: 16rem;
+}
+.active #h-4{
+    animation: glow-ins 3s ease-in;
 }
 .footer{
     background-color: #100F10;
@@ -234,5 +248,14 @@ a{
     position: relative;
     bottom: 30px;
     left: 10px;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+  
+.reveal.active {
+    opacity: 1;
 }
 
