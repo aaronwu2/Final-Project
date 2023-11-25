@@ -59,18 +59,18 @@ ol {
 }
 
 .lists {
-    color: #F8E6DE;
     margin: 25px;
     transition: color 0.3s ease;
 }
 
-.lists:hover {
+a:hover {
     cursor: pointer;
     color: #A98F76;
 }
 
 a{
     text-decoration: none;
+    color: #F8E6DE;
 }
 .home-section1{
     position: relative;
@@ -258,4 +258,5 @@ a{
 .reveal.active {
     opacity: 1;
 }
+
 
